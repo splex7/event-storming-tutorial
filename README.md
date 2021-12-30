@@ -170,14 +170,14 @@ Let's search for the following pattern:
 - Command `CmdA` is fired and it causes `EventA`
 - `EventA` affects view `SomeView`.
 - `SomeView` is also needed while processing an invariant that protects `CmdB`
-
-- `EventA`로 인하여 `CmdA`가 실행이 되어진다.
-- - `EventA`는 몇몇 뷰`SomeView`에 영향을 미칩니다.
-- `CmdB` 를 처리하는 동안 몇몇 `SomeView`가 필요합니다. 
-
 - That means that `CmdA` and `CmdB` might be good candidates to land in the same module!
-- 이것은 `CmdA`, `CmdB`가 같은 모듈의 후보가 될 수 있음을 의미합니다.
 - Let's put those commands (together with invariants and events) next to each other.
+
+---
+- `EventA`로 인하여 `CmdA`가 실행이 되어진다.
+- `EventA`는 몇몇 뷰`SomeView`에 영향을 미칩니다.
+- `CmdB` 를 처리하는 동안 몇몇 `SomeView`가 필요합니다. 
+- 이것은 `CmdA`, `CmdB`가 같은 모듈의 후보가 될 수 있음을 의미합니다.
 - 이제 이 commands(이벤트와 invariant와 함께) 같이 놓도록 합니다.
 
 Doing so might segment our domain into very cohesive spots. Below we can find a proposed modularization. Remember that this is just a heuristic, you might end up with different setup. Proposed technique gives us a good chance to identify modules which are loosely coupled. This method is just a heuristic (not a strong rule) that can help us at finding independent modules. Also, if you think about it, proposed modules have linguistic boundaries. Credit card means something different for accounting and marketing, even though it’s the same word. In DDD terminology those are called *Bounded Contexts*. Those will be our deployment units. Also, this generalization must take into account if the effect should be immediate or eventual. If it can be eventually consistent, this heuristic is not that strong, even though there is a relationship.

@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=k8sGf6ZPs2E
 
   Help teams understand and fix the gap between complex business problems (the so-called "domain") and the model in code representing it. The most common problem I run into is that the domain models that find their way to production are often far and away from what the domain experts had in mind.
 
-  팀이 비즈니스(소위 도메인이라고 불리는)와 코드로 나타내어지는 모델의 차이를 이해하고 수정하도록 돕는 것이 중요합니다. 가장 일반적으로 발생하는 문제는 도메인 모델로 개발되어진 프로그램이 도메인 전문가들이 생각하고 있던 것과는 거리가 멀다는 것입니다.
+  팀이 복잡한 비즈니스(소위 도메인이라고 불리는)와 코드로 나타내어지는 모델의 차이를 이해하고 수정하도록 돕는 것이 중요합니다. 가장 일반적으로 발생하는 문제는 도메인 모델로 개발되어진 프로그램이 도메인 전문가들이 생각하고 있던 것과는 거리가 멀다는 것입니다.
 
 - DIVIDE
 
@@ -102,7 +102,7 @@ We are going to implement a simplified credit card management system. We will se
 
 To understand what is **really** going on in our business problem we can take advantage of a lightweight technique called [Event Storming](https://en.wikipedia.org/wiki/Event_storming). All we need is unlimited space on a wide wall, sticky notes and both business and technical people gathered in one room. The first step is to write down **what can happen** in our domain on orange notes. These are the **domain events.** Note the past tense and no particular order.
 
-우리 비즈니스에서 무슨 일이 일어나고 있는지를 이해하고 살펴보기 위해서 우리는 이벤트스톰이라고 불리는 가벼운 기술을 사용할 수 있습니다. 우리에게 필요한 것은 넓은 벽, 포스트잇, 그리고 비즈니스와 엔지니어팀을 가둘수 있는 넓은 방이 필요합니다. 첫 번째 단계는 우리의 도메인에서 일어날 수 있는 일을 오렌지색 노트에 적는 것입니다. 이것이 도메인 이벤트 입니다. 여기에는 과거시제도 없고 특별한 순서도 없습니다.
+우리 비즈니스에서 무슨 일이 일어나고 있는지를 이해하고 살펴보기 위해서 우리는 이벤트스톰이라고 불리는 가벼운 기술을 사용할 수 있습니다. 우리에게 필요한 것은 넓은 벽, 포스트잇, 그리고 비즈니스와 엔지니어팀을 가둘수 있는 넓은 방이 필요합니다. 첫 번째 단계는 우리의 도메인에서 일어날 수 있는 일을 오렌지색 노트에 적는 것입니다. 이것이 도메인 이벤트 입니다. 과거시제로 작성하고 특별한 순서는 없습니다.
 
 "도메인 주도 설계 구현 p378" 
 
@@ -140,7 +140,7 @@ There is also a green note: *plastic card personalization view*. It is a direct 
 
 Next step is crucial. We need to know if the cause alone is sufficient for the domain event to occur. Maybe there is another condition that have to be met. Maybe more than one. Those conditions are called **invariants.** If so, we write them down on yellow notes and place in between events and causes.
 
-다음 단계는 매우 중요합니다. 우리는 원인만으로 도메인 이벤트가 발생하는지 충분한지를 알 필요가 있습니다. 아마도 충족시켜야할 다른 조건이 있을 것입니다. 아마도 한계 혹은 여러개의 원인이 있을 수 있습니다. 이러한 조건들은 invariants라고 말합니다. 그렇다면 우리는 그 원인을 적고 노란색 노트로 표시된 원인과 이벤트 사이에 붙여 놓습니다.
+다음 단계는 매우 중요합니다. 우리는 도메인 이벤트가 어떤 한가지 원인에 의해 발생하는것으로 충분한지 알 필요가 있습니다. 아마도 이벤트발생에 필요한 다른 조건이 있을 것입니다. 아마도 한계 혹은 여러개의 원인이 있을 수 있습니다. 이러한 조건들은 invariants라고 말합니다. 그렇다면 우리는 그 원인을 적고 노란색 노트로 표시된 원인과 이벤트 사이에 붙여 놓습니다.
 
 ![invariants](https://github.com/pilloPl/eventstorming-with-spring/blob/master/invariants.png?raw=true)
 

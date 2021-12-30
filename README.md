@@ -155,7 +155,7 @@ To find boundaries between business modules we can apply the rule of cohesion: t
 
 In order to check invariants (yellow notes) system must ask some questions. For instance, in order to withdraw there must be already an assigned limit. System must run a query: *“Hi, does it have assigned limit?”*. On the other hand, there are commands and events that might **change** answer to that question. For instance, the first command to assign limit changes that answer from *no* to *yes* forever. This a clear indicator of **highly cohesive** behaviors that might go together into one module or class.
 
-invariants(노란색 노트)를 확인하기 위해서 우리는 몇가지 질문들을 꼭 자문해볼 필요가 있습니다. 예를 들어, 인출을 하려면 이미 정해진 한도가 있어야 한다. 시스템은 반드시 아래의 쿼리를 수행해야 합니다 "Hi, 정해진 한도를 가지고 있어야 합니까?". 반면 질문에 대한 응답을 변화시키기 위한 명령과 이벤트가 있습니다. 예를 들어, 한계를 할당하기 위한 첫 번째 명령은 '아니오'에서 '예'로 응답하는 것을 영구적으로 변경한다. 이것은 하나의 모듈이나 클래스로 함께 갈 수 있는 고도로 응집력 있는 행동을 나타내는 명확한 지표다.
+invariants(노란색 노트)를 확인하기 위해서 우리는 몇가지 질문들을 꼭 자문해볼 필요가 있습니다. 예를 들어, 인출을 하려면 이미 정해진 한도가 있어야 합니다. 시스템은 반드시 아래의 쿼리를 수행해야 합니다 "안녕하세요, 인출한도가 설정되어 있나요?". 다른 한편으로는 이 질문에 대한 **응답**을 변경하는 커맨드과 이벤트가 있습니다. 가령 인출한도를 설정하기 위한 첫 번째 커맨드는 응답을 '아니오'에서 '예'로 변경하게됩니다. 이것은 하나의 모듈이나 클래스에 함께 들어갈 수 있는 매우 응집력 있는 동작에 대한 명확한 지표입니다.
 
 Let's apply this heuristic in all places. On green notes we will write down the name of a query/view that the system needs to check during processing each invariant. Also, let's highlight when the answer to that query/view might change as a consequence of an event. That way the green notes can be spotted either next to an invariant or next to an event.
 

@@ -159,7 +159,7 @@ invariants(노란색 노트)를 확인하기 위해서 우리는 몇가지 질�
 
 Let's apply this heuristic in all places. On green notes we will write down the name of a query/view that the system needs to check during processing each invariant. Also, let's highlight when the answer to that query/view might change as a consequence of an event. That way the green notes can be spotted either next to an invariant or next to an event.
 
-이 경험을 모든 곳에서 적용 해 보겠습니다. 초록색 노트에서 각 불변량을 처리하는 동안 시스템이 확인해야하는 쿼리 / 뷰의 이름을 기록합니다. 또한 해당 쿼리 / 뷰에 대한 응답이 이벤트의 결과로 변경 될 때를 강조 표시합니다. 그렇게하면 초록색 메모가 불변성 옆이나 이벤트 옆에 나타납니다.
+이 경험을 모든 곳에서 적용 해 봅시다. 초록색 노트에 각각의 불변속성(invariants)을 처리하는 동안 시스템이 확인해야하는 "쿼리/뷰"의 이름을 기록합니다. 또한 해당 쿼리 / 뷰에 대한 응답이 이벤트의 결과로 변경 될 때를 강조 표시합니다. 그렇게하면 초록색 메모가 불변성 옆이나 이벤트 옆에 나타납니다.
 
 ![invariants-view-events-view-changes](https://i.imgur.com/G9XVk63.png)
 

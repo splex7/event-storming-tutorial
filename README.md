@@ -168,11 +168,13 @@ Let's search for the following pattern:
 위의 그림에서 보면 아래와 같은 패턴을 찾을 수 있습니다.
 
 - Command `CmdA` is fired and it causes `EventA`
-- `EventA`로 인하여 `CmdA`가 실행이 되어진다.
 - `EventA` affects view `SomeView`.
-- `EventA`는 몇몇 뷰`SomeView`에 영향을 미칩니다.
 - `SomeView` is also needed while processing an invariant that protects `CmdB`
+
+- `EventA`로 인하여 `CmdA`가 실행이 되어진다.
+- - `EventA`는 몇몇 뷰`SomeView`에 영향을 미칩니다.
 - `CmdB` 를 처리하는 동안 몇몇 `SomeView`가 필요합니다. 
+
 - That means that `CmdA` and `CmdB` might be good candidates to land in the same module!
 - 이것은 `CmdA`, `CmdB`가 같은 모듈의 후보가 될 수 있음을 의미합니다.
 - Let's put those commands (together with invariants and events) next to each other.
